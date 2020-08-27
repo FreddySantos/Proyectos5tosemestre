@@ -5,31 +5,32 @@
 #include <iomanip>
 using namespace std;
 
-double vdd;
-double nop;
-double perc;
-int v1 = rand()%100+1;
+double p;
+double n;
+double v;
+
+int V1 = rand()%100+1;
 
 int main()
 {
-    bool a[v1];
+    bool a[V1];
 
-    for (int i=0; i<v1;i++)
+    for (int i=0; i<V1;i++)
     {
         if(a[i])
         {
             puts("T");
-            vdd = vdd+1;
+            v = v+1;
         }
         else {
             puts("F");
-            nop = nop + 1;
+            n = n + 1;
         }
     }
-    perc=(vdd/sizeof(a))*100;
-    cout << "True: " << vdd << endl;
-    cout << "False: " << nop << endl;
-    cout << "% of True: " << setprecision(6) << perc << endl;
+    p=(v/sizeof(a))*100;
+    cout << "True: " << v << endl;
+    cout << "False: " << n << endl;
+    cout << "% of True: " << setprecision(6) << p << endl;
 }
 
 ###########################
