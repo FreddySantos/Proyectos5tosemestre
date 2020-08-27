@@ -9,7 +9,7 @@ double p;
 double n;
 double v;
 
-int V1 = rand()%100+1;
+int V1 = rand()%100;
 
 int main()
 {
@@ -32,6 +32,7 @@ int main()
     cout << "False: " << n << endl;
     cout << "% of True: " << setprecision(6) << p << endl;
 }
+
 
 ###########################
 #######  Ejercicio 2   #####
