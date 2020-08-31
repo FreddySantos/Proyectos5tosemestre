@@ -51,4 +51,38 @@ int main()
 
 ########################################       Ejercicio 8       ###################################################
 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double sum = 0, promedio;
+    int contador = 0,x,y;
+    int arr[10];
+    
+    cout << "Ingrese solo 10 valores : ";
+    for (int& i : arr)
+    {   
+        cin >> x;
+        i = x;
+    }
+    y = sizeof(arr) / sizeof(arr[0]);
+    for (int j = 0; j < y; j++)
+    {
+        sum += arr[j];
+        promedio = sum / y;
+    }
+    for (int k : arr)
+    {
+        {
+            contador++;
+        }
+    }
+    cout << "Numeros encima del promedio: " << contador << endl;
+    cout << "El promedio es: " << promedio << endl;
+    
+    return 0;
+}
+
+#########################################################################################################
 
