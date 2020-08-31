@@ -49,6 +49,23 @@ int main()
     return 0;
 }
 
+######################################       Ejercicio 5    #####################################################
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+
+    string x = "Hola mundo de Fredy";
+        for(int c : x)
+        {
+            cout << c
+                << endl;
+        }
+    return 0;
+}
+
 ########################################       Ejercicio 8       ###################################################
 
 #include <iostream>
