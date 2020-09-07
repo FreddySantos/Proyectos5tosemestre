@@ -1,12 +1,3 @@
-# Proyectos5tosemestre
-Tarea y proyectos 5to semest
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 #include <iostream>
 #include <stdio.h>
 #include <cstdint>
