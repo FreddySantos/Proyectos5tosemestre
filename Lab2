@@ -1,0 +1,32 @@
+from tkinter import *
+import math
+
+def show_answer():
+    a = num1.get()
+    b= num2.get()
+    x = math.pow(int(a), 2) + math.pow(int(b), 2)
+    y = math.sqrt(x)
+    label_result.config(text=" %.4f" % y)
+    return
+
+root = Tk()  
+root.title("Calculate Hypotenuse")
+root.geometry('400x300')
+root.configure(bg='White')
+Label( text="Length of side A").grid(row=0,pady=(25,25), padx=(45, 0))
+Label( text="Length of side B").grid(row=1, pady=(25,25), padx=(45, 0))
+Label( text="Length of Hypotenusa").grid(row=4, pady=(25,25), padx=(45, 0))
+
+
+
+num1= Entry(root) 
+num2= Entry(root)
+
+label_result = Label(root)
+label_result.grid(row=4, column=1, pady=(25, 25), padx=(45, 0))
+ 
+num1.grid(row=0, column=1, pady=(25, 25), padx=(45, 0))
+num2.grid(row=1, column=1, pady=(25, 25), padx=(45, 0))
+Button(root,text="Calculate Hypotenusa", command=show_answer).grid(row=3,column=1)
+
+mainloop()
