@@ -1,3 +1,6 @@
+#################################################################
+####              Calculadora de Hipotenusa                 ####
+#################################################################
 from tkinter import *
 import math
 
@@ -6,7 +9,7 @@ def show_answer():
     b= num2.get()
     x = math.pow(int(a), 2) + math.pow(int(b), 2)
     y = math.sqrt(x)
-    label_result.config(text=" %.4f" % y)
+    label_result.config(text=" %.0f" % y)
     return
 
 root = Tk()  
@@ -30,3 +33,80 @@ num2.grid(row=1, column=1, pady=(25, 25), padx=(45, 0))
 Button(root,text="Calculate Hypotenusa", command=show_answer).grid(row=3,column=1)
 
 mainloop()
+
+
+#################################################################
+####                Calculadora de Areas                     ####
+#################################################################
+from tkinter import *
+import math
+
+def Area_Rectangle():
+    var1 = num1.get()
+    var2= num2.get()
+    x1 =  float(var1) * float(var2)
+    label_Rectangule.config(text=" %.0f" % x1)
+    return
+
+def Area_Parallelogram():
+    var3=num1.get()
+    var4=num2.get()
+    x2 =  float(var3) * float(var4)
+    label_Parallelogram.config(text=" %.0f" % x2)
+    return
+
+def Area_Triangle():
+    var5=num1.get()
+    var6=num2.get()
+    x3 = float (var5) * float (var6) / 2
+    label_Triangle.config(text=" %.0f" % x3)
+    return
+
+def Area_Cube():
+    var7=num1.get()
+    var8=num2.get()
+    x4 = float (var7) * float (var8) * 6
+    label_Cube.config(text=" %.0f" % x4)
+    return
+
+def Area_Pyramid():
+    var9 = num1.get()
+    var10 = num2.get()
+    x5 = ((2 * float(var9) * float(var10)) + math.pow(float(var9), 2))
+    label_Pyramid.config(text=" %2d" % x5)
+    return
+
+
+
+root = Tk()  
+root.title("Calculate Hypotenuse")
+root.geometry('500x400')
+root.configure(bg='White')
+Label( text="Base").grid(row=0,column=1,pady=(25,25), padx=(45, 0))
+Label( text="Altura").grid(row=1,column=1, pady=(25,25), padx=(45, 0))
+Label( text="Enter the base and heigth").grid(row=0,column=0, pady=(25,25), padx=(45, 0))
+
+
+num1= Entry(root) 
+num2= Entry(root)
+num1.grid(row=0, column=3, pady=(25, 25), padx=(45, 0))
+num2.grid(row=1, column=3, pady=(25, 25), padx=(45, 0))
+
+label_Rectangule = Label(root)
+label_Parallelogram=Label(root)
+label_Triangle=Label(root)
+label_Cube=Label(root)
+label_Pyramid=Label(root)
+
+label_Rectangule.grid(row=3,column=3,pady=(20,10), padx=(45, 0))
+label_Parallelogram.grid(row=4,column=3,pady=(20,10), padx=(45, 0))
+label_Triangle.grid(row=5,column=3,pady=(20,10), padx=(45, 0))
+label_Cube.grid(row=6,column=3,pady=(20,10), padx=(45, 0))
+label_Pyramid.grid(row=7,column=3,pady=(20,10), padx=(45, 0))
+
+Button(root,text="  Rectangulo ",command= Area_Rectangle).grid(row=3,column=0,pady=(20,10), padx=(45, 0))
+Button(root,text="Parallelogram",command= Area_Parallelogram).grid(row=4,column=0,pady=(0,0), padx=(45, 0))
+Button(root,text="  Triangle   ",command=Area_Triangle).grid(row=5,column=0,pady=(10,10), padx=(45, 0))
+Button(root,text="    Cube     ",command= Area_Cube).grid(row=6,column=0,pady=(10,10), padx=(45, 0))
+Button(root,text="   Pyramid   ",command= Area_Pyramid).grid(row=7,column=0,pady=(10,10), padx=(45, 0))
+root.mainloop()
