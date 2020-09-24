@@ -35,6 +35,10 @@ Button(root,text="Calculate Hypotenusa", command=show_answer).grid(row=3,column=
 mainloop()
 
 
+
+
+
+
 #################################################################
 ####                Calculadora de Areas                     ####
 #################################################################
@@ -110,3 +114,87 @@ Button(root,text="  Triangle   ",command=Area_Triangle).grid(row=5,column=0,pady
 Button(root,text="    Cube     ",command= Area_Cube).grid(row=6,column=0,pady=(10,10), padx=(45, 0))
 Button(root,text="   Pyramid   ",command= Area_Pyramid).grid(row=7,column=0,pady=(10,10), padx=(45, 0))
 root.mainloop()
+
+
+#################################################################
+####                  Addition Program                      ####
+#################################################################
+
+from tkinter import *
+import math
+
+def Area_Suma():
+    var1 = num1.get()
+    var2= num2.get()
+    x1 =  float(var1) + float(var2)
+    label_Suma.config(text=" %.1f" % x1)
+    return
+
+
+root = Tk()  
+root.title("Addition Program")
+root.geometry('320x400')
+root.configure(bg='#D2F5E4')
+Label( text="Enter first number").grid(row=0,column=1,pady=(25,25), padx=(45, 0))
+Label( text="Enter second number").grid(row=2,column=1,pady=(25,25), padx=(45, 0))
+Label( text="Sum").grid(row=5,column=0,pady=(25,25), padx=(45, 0))
+
+
+num1= Entry(root) 
+num2= Entry(root)
+num1.grid(row=1, column=1, pady=(25, 25), padx=(45, 0))
+num2.grid(row=3, column=1, pady=(25, 25), padx=(45, 0))
+
+label_Suma = Label(root)
+
+label_Suma.grid(row=5,column=1,pady=(20,10), padx=(45, 0))
+
+
+Button(root,text="  Add ",command= Area_Suma).grid(row=4,column=1,pady=(20,10), padx=(45, 0))
+
+root.mainloop()
+
+
+#################################################################
+####                Button Color Options                     ####
+#################################################################
+
+
+from tkinter import *
+
+
+
+def verde():
+    root.config(bg='#22FC00')
+    Label(root, text="Hello World ", bg="light green", font=("Helvetica", 16, "bold")).grid(row=0, pady=(15, 15), padx=(35, 0))
+    return
+
+def Amarillo():
+    root.config(bg='yellow')
+    Label(root, text="Hello World ", bg="light yellow", font=("Helvetica", 16, "bold")).grid(row=0, pady=(15, 15), padx=(35, 0))
+    return
+
+def Rojo():
+    root.config(bg='#B81010')
+    Label(root, text="Hello World ", bg="#F05D68", font=("italik", 16, "bold")).grid(row=0, pady=(15, 15), padx=(35, 0))
+    return
+
+def Azul():
+    root.config(bg='blue')
+    Label(root, text="Hello World ", bg="#35CAE5", font=("", 16, "bold")).grid(row=0, pady=(15, 15), padx=(35, 0))
+    return
+    
+root = Tk()
+root.geometry('225x250')
+root.config(bg="white")
+root.title('Button Color Options')
+    
+Label(root, text="Hello World ", bg="white", font=("italik", 16)).grid(row=0, pady=(15, 15), padx=(35, 0))
+Button(root, text=' Click for message in Green' , command=verde, borderwidth=5).grid(row=1, column=0, pady=(5, 5), padx=(35, 0))
+Button(root, text=' Click for message in Yellow', command=Amarillo, borderwidth=5).grid(row=2, column=0, pady=(5, 5), padx=(35, 0))
+Button(root, text='  Click for message in Red'  , command=Rojo, borderwidth=5).grid(row=3, column=0, pady=(5, 5), padx=(35, 0))
+Button(root, text='  Click for message in Blue' , command=Azul, borderwidth=5).grid(row=4, column=0, pady=(5, 5), padx=(35, 0))
+
+root.mainloop()
+
+
