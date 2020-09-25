@@ -198,3 +198,41 @@ Button(root, text='  Click for message in Blue' , command=Azul, borderwidth=5).g
 root.mainloop()
 
 
+############################################################
+####             Runners Calculator                    ####
+###########################################################
+
+from tkinter import *
+import math
+
+
+def Area_Rectangle():
+    var1 = num1.get()
+    var2= num2.get()
+    x1 = float(var2) / float(var1)
+    label_Rectangule.config(text=" %.3f" % x1)
+    return
+
+    
+    
+root = Tk()  
+root.title("Runner Calculator")
+root.geometry('400x400')
+root.configure(bg='#F1AB0A')
+Label( text="Millas corridas",bg="#F9D175").grid(row=0,column=1,pady=(25,25), padx=(45, 0))
+Label( text="Tiempo utilizado",bg="#F9D175").grid(row=2,column=1,pady=(25,25), padx=(45, 0))
+Label( text="Velocidad",bg="#F9D175").grid(row=5,column=0,pady=(25,25), padx=(45, 0))
+
+
+num1= Entry(root,bg="#F9D175") 
+num2= Entry(root,bg="#F9D175")
+num1.grid(row=1, column=1, pady=(25, 25), padx=(45, 0))
+num2.grid(row=3, column=1, pady=(25, 25), padx=(45, 0))
+
+label_Rectangule = Label(root,bg="#F9D175")
+label_Rectangule.grid(row=5,column=1,pady=(20,10), padx=(45, 0))
+
+
+Button(root,text="Calcular",command= Area_Rectangle,bg="#F9D175").grid(row=4,column=1,pady=(20,10), padx=(45, 0))
+
+root.mainloop()
