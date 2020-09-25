@@ -206,7 +206,7 @@ from tkinter import *
 import math
 
 
-def Area_Rectangle():
+def Hola():
     var1 = num1.get()
     var2= num2.get()
     x1 = float(var2) / float(var1)
@@ -233,6 +233,6 @@ label_Rectangule = Label(root,bg="#F9D175")
 label_Rectangule.grid(row=5,column=1,pady=(20,10), padx=(45, 0))
 
 
-Button(root,text="Calcular",command= Area_Rectangle,bg="#F9D175").grid(row=4,column=1,pady=(20,10), padx=(45, 0))
+Button(root,text="Calcular",command= Hola,bg="#F9D175").grid(row=4,column=1,pady=(20,10), padx=(45, 0))
 
 root.mainloop()
