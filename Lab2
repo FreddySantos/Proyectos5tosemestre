@@ -236,3 +236,52 @@ label_Rectangule.grid(row=5,column=1,pady=(20,10), padx=(45, 0))
 Button(root,text="Calcular",command= Hola,bg="#F9D175").grid(row=4,column=1,pady=(20,10), padx=(45, 0))
 
 root.mainloop()
+
+
+####################################################
+######           Grade Percentages             ####
+####################################################
+
+from tkinter import *
+import math
+
+
+def show_answer():
+    var1 = num1.get()
+    var2 = num2.get()
+    var3 = num3.get()
+    var4 = num4.get()
+    grade = float(var1) + float(var2) + float(var3)
+    per = float(grade) + float(var4)
+    ans1 = float(per/550) * 100
+    label_result.config(bg="#AF12F9",text="Total Percentage: %.2f" % ans1)
+    return
+
+
+root = Tk()
+root.geometry('350x225')
+root.resizable(False, False)
+root.config(bg="#AF12F9")
+root.title('Grade Percentages')
+Label(root, text="Primer examen: ", bg="#AF12F9").grid(row=0, column=0, pady=(25, 0), padx=(25, 25))
+Label(root, text="Segundo examen: ", bg="#AF12F9").grid(row=0, column=1, pady=(25, 0), sticky=W)
+Label(root, text="Tercer examen: ", bg="#AF12F9").grid(row=1, column=0, pady=(30, 0), padx=(25, 25))
+Label(root, text="Puntos: ", bg="#AF12F9").grid(row=1, column=1, pady=(30, 0), padx=(0, 0), sticky=W)
+
+num1 = Entry(root)
+num2 = Entry(root)
+num3 = Entry(root)
+num4 = Entry(root)
+
+label_result = Label(root, bg="#AF12F9")
+
+num1.grid(row=1, column=0, pady=(5, 25), padx=(30, 30))
+num2.grid(row=1, column=1, pady=(5, 25), padx=(0, 10))
+num3.grid(row=2, column=1, pady=(5, 25), padx=(0, 10))
+num4.grid(row=2, column=0, pady=(5, 25), padx=(30, 30))
+
+label_result.grid(row=3, column=1, pady=(0, 25), padx=(0, 75))
+
+Button(root, text='porcentaje', command=show_answer).grid(row=3, column=0, pady=(5, 25), padx=(0, 25))
+
+mainloop()
