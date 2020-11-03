@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  Examen.cpp
+  ExamenDlg.cpp
+C:\Users\HP\source\repos\Examen\ExamenDlg.cpp(295,6): error C2065: 'argc': identificador no declarado
+C:\Users\HP\source\repos\Examen\ExamenDlg.cpp(353,6): error C3867: 'CExamenDlg::argv': sintaxis no estándar; utilice '&' para crear un puntero al miembro
+C:\Users\HP\source\repos\Examen\ExamenDlg.cpp(353,6): error C2109: el subíndice requiere una matriz o tipo de puntero
+C:\Users\HP\source\repos\Examen\ExamenDlg.cpp(381,13): error C2065: 'LINE_LEN': identificador no declarado
+  Generando código...
